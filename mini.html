@@ -1,16 +1,149 @@
-Structure & Styling
+<html>
+<head>
+    <title>Mini Project</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 2;
+            padding: 3;
+        }
+            
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            background-color:white);
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
 
-The <head> contains the title and internal CSS styles.
-The <body> has a centered layout with a navigation menu, a button, and course cards.
-Header & Navigation
+        header {
+            margin-bottom: 30px;
+            color: black;
+        }
 
-The header displays the site name and tagline.
-The <nav> contains a list of course links (HTML, CSS, JavaScript, etc.).
-Button & Course Cards
+        .hover {
+            color: rgb(73, 230, 86);
+            padding: 15px 25px;
+            background-color: rgb(240, 60, 84);
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            border-radius: 4px;
+            font-size: 16px;
+            margin-bottom: 20px;w
+        }
 
-A styled button (.hover) is included for "Courses."
-.glass-card divs display different courses, each with a title, description, and learning links.
-Responsive Design
+        .hover:hover {
+            transform: scale(1.1);
+        }
 
-Uses flexbox for layout and media queries to adjust on small screens.
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            max-width: 3000px;
+        }
 
+        .glass-card {
+            background-color: rgb(13, 212, 30);
+            color: purple;
+            border-radius: 10px;
+            padding: 20px;
+            width: 250px;
+            text-align: center;
+            min-height: 180px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        @media (max-width: 500px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            margin: 10px;
+            padding: 0;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            color:deeppink;
+            font-weight: 500;
+            padding: 10px;
+            text-decoration: none;
+        }
+
+        nav ul li a:hover {
+            border-bottom: 3px solid rgb(223, 11, 11);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>W3.Schools</h1>
+        <h2>Happy to Learn</h2>
+        <nav>
+            <ul>
+                <li><a href="#HTML">HTML</a></li>
+                <li><a href="#CSS">CSS</a></li>
+                <li><a href="#JAVASCRIPT">JAVASCRIPT</a></li>
+                <li><a href="#PYTHON">PYTHON</a></li>
+                <li><a href="#C">C</a></li>
+                <li><a href="#DSA">DSA</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <button class="hover">Courses</button>
+
+    <div class="container">
+        <div class="glass-card">
+            <h2>HTML</h2>
+            <h3>The Language for Building Web Pages</h3>
+            <p>Learn HTML</p><p>Video Tutorial</p><p>HTML Reference</p><p>Get Certified</p>
+        </div>
+        <div class="glass-card">
+            <h2>CSS</h2>
+            <h3>The Language for Styling Web Pages</h3>
+            <p>Learn CSS</p><p>CSS Reference</p><p>Get Certified</p>
+        </div>
+        <div class="glass-card">
+            <h2>JavaScript</h2>
+            <h3>The Language for Programming Web Pages</h3>
+            <p>Learn JavaScript</p><p>JavaScript Reference</p><p>Get Certified</p>
+        </div>
+        <div class="glass-card">
+            <h2>Python</h2>
+            <h3>A Popular Programming Language</h3>
+            <p>Learn Python</p><p>Python Reference</p><p>Get Certified</p>
+        </div>
+        <div class="glass-card">
+            <h2>C</h2>
+            <h3>A Powerful Low-Level Language</h3>
+            <p>Learn C</p><p>C Reference</p><p>Get Certified</p>
+        </div>
+        <div class="glass-card">
+            <h2>DSA</h2>
+            <h3>Data Structures and Algorithms</h3>
+            <p>Learn DSA</p><p>DSA Reference</p><p>Get Certified</p>
+        </div>
+    </div>
+
+    <br>
+    <h2><a href="https://www.w3schools.com/">W3Schools Link</a></h2>
+
+</body>
+</html>
